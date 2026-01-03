@@ -1,1 +1,186 @@
 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ViraMúsica - Transforme Histórias em Canções</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, sans-serif; }
+        
+        :root {
+            --primary: #764ba2;
+            --secondary: #fc5c7d;
+            --accent: #25d366;
+            --text: #333;
+            --light-bg: #f9f9f9;
+        }
+
+        body { color: var(--text); line-height: 1.6; }
+        a { text-decoration: none; }
+
+        /* HERO SECTION */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px 100px;
+            text-align: center;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            position: relative;
+        }
+
+        .logo { font-size: 2.5rem; font-weight: 800; margin-bottom: 10px; }
+        .logo span { color: #ffd700; }
+        
+        .hero-title { font-size: 2.2rem; margin-bottom: 20px; line-height: 1.2; }
+        .hero-subtitle { font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin: 0 auto 30px; }
+
+        .btn-cta {
+            background: var(--accent);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.4);
+            transition: transform 0.2s;
+            display: inline-block;
+            text-transform: uppercase;
+            border: 2px solid white;
+        }
+        .btn-cta:hover { transform: scale(1.05); background: #20bd5a; }
+
+        /* PLAYER CARD (Exemplo) */
+        .demo-section { margin-top: -60px; padding: 0 20px; text-align: center; }
+        .player-card {
+            background: white;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            text-align: left;
+        }
+        .player-tag { background: #eee; padding: 5px 10px; border-radius: 10px; font-size: 0.8rem; font-weight: bold; color: #555; margin-bottom: 10px; display: inline-block; }
+        .player-title { font-weight: bold; color: var(--primary); margin-bottom: 5px; }
+        audio { width: 100%; margin-top: 15px; border-radius: 10px; }
+
+        /* COMO FUNCIONA */
+        .steps-section { padding: 60px 20px; text-align: center; background: white; }
+        .section-title { font-size: 1.8rem; color: var(--primary); margin-bottom: 40px; }
+        
+        .steps-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 1000px; margin: 0 auto; }
+        .step-item { flex: 1; min-width: 250px; padding: 20px; }
+        .step-icon { font-size: 3rem; margin-bottom: 15px; display: block; }
+        .step-item h3 { margin-bottom: 10px; }
+
+        /* PROVA SOCIAL */
+        .reviews-section { padding: 60px 20px; background: var(--light-bg); }
+        .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto; }
+        
+        .review-card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .stars { color: #ffd700; margin-bottom: 10px; }
+        .client-name { font-weight: bold; margin-top: 15px; color: var(--primary); display: block; }
+
+        /* PREÇO E FAQ */
+        .offer-section { padding: 60px 20px; text-align: center; background: white; }
+        .price-tag { font-size: 3.5rem; font-weight: 800; color: var(--primary); margin: 20px 0; }
+        .price-tag small { font-size: 1.5rem; color: #999; font-weight: normal; }
+        
+        footer { background: #333; color: white; text-align: center; padding: 30px 20px; font-size: 0.9rem; }
+        
+        /* Mobile fixes */
+        @media (max-width: 600px) {
+            .hero-title { font-size: 1.8rem; }
+            .btn-cta { width: 100%; padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Vira<span>Música</span></div>
+        <h1 class="hero-title">Sua história merece virar uma música inesquecível.</h1>
+        <p class="hero-subtitle">Transformamos suas melhores memórias em canções personalizadas. Emocionante, exclusivo e entregue em 24h.</p>
+        <a href="pedido.html" class="btn-cta">QUERO MINHA MÚSICA</a>
+    </header>
+
+    <section class="demo-section">
+        <div class="player-card">
+            <span class="player-tag">🎵 Estilo: Pagode Romântico</span>
+            <div class="player-title">Amor de Girafa (História Real)</div>
+            <p style="font-size: 0.9rem; color: #666;">"Foi amor à primeira vergonha... amor não endireita as pernas, só deixa o tombo mais leve!"</p>
+            <audio controls>
+                <source src="exemplo-girafa.mp3" type="audio/mpeg">
+                Seu navegador não suporta áudio.
+            </audio>
+        </div>
+    </section>
+
+    <section class="steps-section">
+        <h2 class="section-title">Como funciona? É simples!</h2>
+        <div class="steps-grid">
+            <div class="step-item">
+                <span class="step-icon">✍️</span>
+                <h3>1. Conte sua História</h3>
+                <p>Preencha nosso formulário rápido contando o momento que você quer eternizar.</p>
+            </div>
+            <div class="step-item">
+                <span class="step-icon">🎸</span>
+                <h3>2. Escolha o Estilo</h3>
+                <p>Pagode, Rock, Sertanejo, Trap... Temos o ritmo perfeito para a sua emoção.</p>
+            </div>
+            <div class="step-item">
+                <span class="step-icon">🎁</span>
+                <h3>3. Receba em 24h</h3>
+                <p>Sua música chega pronta no WhatsApp para você ouvir e compartilhar.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews-section">
+        <h2 class="section-title" style="text-align: center;">Quem pediu, amou ❤️</h2>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"Eu chorei de rir e de emoção! Fiz pro meu namorado contando nosso primeiro encontro desastroso. Ele amou!"</p>
+                <span class="client-name">- Beatriz S.</span>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"Não acreditei que ficaria tão bom por esse preço. A letra pegou exatamente os detalhes que eu escrevi."</p>
+                <span class="client-name">- Carlos Eduardo</span>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"Melhor presente de aniversário. Mandei a história da minha mãe e virou um samba lindo."</p>
+                <span class="client-name">- Fernanda Lima</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="offer-section">
+        <h2>Oferta de Lançamento</h2>
+        <p>Preço único por tempo limitado.</p>
+        
+        <div class="price-tag">R$ 9,99</div>
+        
+        <ul style="list-style: none; margin-bottom: 30px; color: #555;">
+            <li>✅ Letra 100% personalizada</li>
+            <li>✅ Melodia original</li>
+            <li>✅ Arquivo MP3 em alta qualidade</li>
+            <li>✅ Entrega Expressa (24h)</li>
+        </ul>
+
+        <a href="pedido.html" class="btn-cta">CRIAR MÚSICA AGORA</a>
+        <p style="margin-top: 15px; font-size: 0.8rem; color: #888;">Pagamento seguro via Mercado Pago ou PIX</p>
+    </section>
+
+    <footer>
+        <p>ViraMúsica &copy; 2026. Feito com amor em Itaboraí - RJ.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.7;">Dúvidas? Chame no WhatsApp.</p>
+    </footer>
+
+</body>
+</html>
